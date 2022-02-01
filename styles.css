@@ -1,0 +1,356 @@
+* {
+  font-family: "Mulish", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100vw;
+  color: white;
+  z-index: 10;
+}
+
+.header img {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.header a {
+  margin-left: auto;
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+}
+
+.jumbotron {
+  padding: 3rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-image: url("./assets/map.png");
+  background-size: cover;
+  z-index: 1;
+}
+
+.jumbotron > * {
+  z-index: 3;
+}
+
+.jumbotron img {
+  width: 4rem;
+  margin-right: 1rem;
+}
+
+.jumbotron h1 {
+  margin-bottom: 0.5rem;
+}
+
+.jumbotron h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.jumbotron > .button-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.jumbotron-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button-container > a:hover {
+  box-shadow: #aaa 0 2.5px 1rem;
+}
+
+.jumbotron-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  z-index: 2;
+
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.jumbotron-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+}
+
+.jumbotron a {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: black;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.app-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: #ccc 0 5px 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.app-icon-container img {
+  width: 3rem;
+  margin-right: 0;
+  margin-left: 0.125rem;
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  padding: 2rem;
+}
+
+.feature-container-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-container-text p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.feature-container-image {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.feature-container-image img {
+  margin: 15% 20% -20% 20%;
+  width: 60%;
+  border-radius: 1.25rem;
+  border: 0.5rem solid black;
+  box-shadow: #565656 0 5px 1.25rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  padding: 2rem 0;
+}
+
+.contact h3 {
+  font-size: 1rem;
+  color: #666;
+  font-weight: normal;
+}
+
+.contact a {
+  font-size: 1.75rem;
+  color: black;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 600px) {
+  .feature-container-image img {
+    margin: 7.5% 25% -20% 25%;
+    width: 40%;
+    border-radius: 2.25rem;
+    border: 0.95rem solid black;
+  }
+
+  .feature-container-text {
+    padding: 2rem 15% 2rem 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hide-mobile {
+    display: inline-block;
+  }
+
+  .desktop-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .feature-container {
+    flex-direction: row;
+  }
+
+  .header {
+    padding: 1rem 3rem;
+  }
+
+  .feature-container-text {
+    padding: 3rem;
+    width: 50vw;
+  }
+
+  .feature-container-image {
+    width: 50vw;
+  }
+
+  .feature-container-image img {
+    margin: 7.5% 25% -20% 25%;
+    width: 50%;
+    border-radius: 2.25rem;
+    border: 0.95rem solid black;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .jumbotron > .button-container {
+    flex-direction: row;
+    width: 35rem;
+  }
+
+  .jumbotron > .button-container #app-store {
+    margin-right: 2rem;
+  }
+
+  .jumbotron-inner-container {
+    flex-direction: row;
+    align-self: center;
+  }
+
+  .app-icon-container {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .feature-container-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-container-text p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .header {
+    padding: 1rem 5rem;
+  }
+
+  .jumbotron {
+    padding: 3rem 0 0 0;
+  }
+
+  .jumbotron h3 {
+    font-size: 2rem;
+  }
+
+  .feature-container-text {
+    padding: 5rem 10rem 5rem 5rem;
+    width: 50vw;
+  }
+
+  .jumbotron > .button-container {
+    margin-top: 1rem;
+  }
+
+  .jumbotron a {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  .app-icon-container {
+    width: 9.5rem;
+    height: 9.5rem;
+    margin-right: 3rem;
+    margin-bottom: 0;
+  }
+
+  .app-icon-container img {
+    width: 5rem;
+    margin-right: 0;
+    margin-left: 0.25rem;
+  }
+
+  .feature-container-image img {
+    margin: 7.5% 30% -12.5% 30%;
+    width: 40%;
+    border-radius: 2.25rem;
+    border: 0.95rem solid black;
+  }
+
+  .feature-container-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .feature-container-text p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .contact {
+    padding: 4rem 0;
+  }
+
+  .contact h3 {
+    font-size: 2rem;
+  }
+
+  .contact a {
+    font-size: 4rem;
+  }
+}
